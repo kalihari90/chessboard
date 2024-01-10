@@ -1,0 +1,71 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+	width: 100%;
+	width: 90vw;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: clamp(3rem, 15vw, 10rem);
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.chessboard {
+	min-width: 100px;
+	min-height: 100px;
+	width: clamp(12.5rem, 66.667vw + 0rem, 50rem);
+	height: clamp(12.5rem, 66.667vw + 0rem, 50rem);
+	background-color: #000000;
+    box-shadow: #000000 5px 10px 30px;
+	margin: 4rem auto;
+	border: 3px solid black;
+	display: grid;
+	grid-template-columns: 1fr 1fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 3fr 1fr 1fr;
+	gap: 2px;
+}
+
+.line {
+	border: 1px solid #000000;
+	background-color: #f6f67a;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	color: #000000;
+	font-size: 1rem;
+}
+
+.outer {
+	background-color: #964d22;
+}
+
+.dark {
+	background: #964d22;
+}
+
+@media only screen and (max-width: 900px) {
+	.line {
+		font-size: 0.75rem;
+	}
+	.chessboard {
+		border: 2px solid black;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.line {
+		font-size: 0.5rem;
+	}
+	.chessboard {
+		gap: 1px;
+		border: 1px solid black;
+	}
+}
